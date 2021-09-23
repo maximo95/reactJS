@@ -15,7 +15,7 @@ const {titulo, subtitulo, edad, id} = props
             <h1>{subtitulo}</h1>
             <p>{edad}</p>
             <p className="material-icons">shopping_cart</p>
-            <nav/>
+            <Nav/>
         </header>
     )
 

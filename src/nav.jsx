@@ -5,6 +5,6 @@ const Nav = () => {
             <a href="">contacto</a>
         </nav>
     )
-} 
+}
 
 export default Nav 

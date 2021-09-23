@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react"
 import ItemCount from "./ItemCount"
 
+
 const productosIniciales = [
     {id:1,titulo:"Producto 1"},
     {id:2,titulo:"Producto 2"}
@@ -21,12 +22,6 @@ const ItemListContainer = () => {
                 console.log(productos)
             })
     },[])
-    
-    return ( 
-        <>
-        {<ItemList productos={productos}/>}
-        </>
-    );
 }
 
-export default ItemListContainer;
+export default ItemListContainer
