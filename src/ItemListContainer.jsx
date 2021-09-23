@@ -1,20 +1,32 @@
 import { useState,useEffect } from "react"
+import ItemCount from "./ItemCount"
 
-const ItemListContainer = (saludo) => {
-    const [contador, setContador] = useState(0)
+const productosIniciales = [
+    {id:1,titulo:"Producto 1"},
+    {id:2,titulo:"Producto 2"}
+]
 
-    useEffect (()=> {
-        console.log("El componente se renderizó")
-    })
-    return (
+const ItemListContainer = () => {
+    const [productos,setProductos] = useState([])
+
+    useEffect(()=>{
+        const simulacion_de_pedido = new Promise((resolver)=>{
+            setTimeout(()=>{
+                resolver(productosIniciales)
+            },2000)
+        })
+
+        simulacion_de_pedido
+            .then(resultado=>{
+                console.log(productos)
+            })
+    },[])
+    
+    return ( 
         <>
-        <p>{saludo}</p>
-        <p>Contador: {contador}</p>
-        <button onClick= {()=> {setContador(contador+1)}}>Aumentar Contador</button>
-        <button onClick= {()=> {setContador(contador-1)}}>Aumentar Contador</button>
-        <contador onAdd={()=>{}}/>
+        {<ItemList productos={productos}/>}
         </>
-    )
+    );
 }
 
-export default ItemListContainer
+export default ItemListContainer;

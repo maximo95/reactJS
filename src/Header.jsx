@@ -20,3 +20,5 @@ const {titulo, subtitulo, edad, id} = props
     )
 
 }
+
+export default Header
