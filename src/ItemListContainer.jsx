@@ -19,9 +19,17 @@ const ItemListContainer = () => {
 
         simulacion_de_pedido
             .then(resultado=>{
-                console.log(productos)
+               setProductos(resultado);
             })
     },[])
+
+    return <div>
+        <ul>
+            {
+                productos.map(producto => <li>{producto.titulo} <ItemCount/></li>)
+            }
+        </ul>
+    </div>
 }
 
 export default ItemListContainer

@@ -6,7 +6,7 @@ import ItemCount from "./ItemCount"
 const App  = () => {
     return (
         <>
-        <header id="main-header" titulo="Mi E-Commerce" subtitulo = "Tienda de Café" edad = {26}/>
+        <Header id="main-header" titulo="Mi E-Commerce" subtitulo = "Tienda de Café"/>
         <ItemListContainer saludo ="Bienvenidos a mi E-Commerce"/>
         <Footer/>
         </>
