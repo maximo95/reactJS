@@ -1,6 +1,6 @@
 import Item from "./Item"
 
-const ItemList = () => {
+const ItemList = (productos) => {
     return (
         <Item/>
     )
