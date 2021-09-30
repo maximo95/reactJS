@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 export const ItemCards = (name,image,types,id) => {
     return (
@@ -7,7 +8,7 @@ export const ItemCards = (name,image,types,id) => {
             <div className="card-body">
                 <h5 className="card-title">{id} - {name}</h5>
                 <ul className="card-text">{types.map(type=><li>{type.type.name}</li>)}</ul>
-                <a href="#.." className="btn btn-primary">Go somewhere</a>
+                <a to={`/heroe/${id}`} className ="btn btn-primary">leer más</a>
             </div>
         </div>
     )
